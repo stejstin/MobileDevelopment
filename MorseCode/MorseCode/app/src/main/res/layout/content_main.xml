@@ -13,36 +13,37 @@
         android:id="@+id/testButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="8dp"
         android:layout_marginStart="8dp"
+        android:layout_marginTop="6dp"
         android:text="Button"
-        app:layout_constraintBottom_toTopOf="@+id/mTextView"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/inputText"
         app:layout_constraintTop_toBottomOf="@+id/inputText" />
 
     <EditText
         android:id="@+id/inputText"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="6dp"
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="28dp"
         android:ems="10"
         android:hint="Enter your text here"
         android:inputType="text"
         android:singleLine="true"
+        app:layout_constraintBottom_toTopOf="@+id/playButton"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/mTextView"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_marginBottom="8dp"
+        android:layout_width="385dp"
+        android:layout_height="402dp"
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
+        android:layout_marginTop="15dp"
         android:background="@android:color/holo_red_light"
+        android:phoneNumber="true"
         android:scrollbars="vertical"
         android:textColor="@android:color/black"
         android:textSize="30sp"
@@ -55,20 +56,37 @@
 
     <Button
         android:id="@+id/ShowCodes"
-        android:layout_width="94dp"
-        android:layout_height="53dp"
+        android:layout_width="103dp"
+        android:layout_height="56dp"
         android:layout_marginEnd="8dp"
         android:text="Show Codes"
-        app:layout_constraintEnd_toEndOf="@+id/inputText"
-        app:layout_constraintTop_toBottomOf="@+id/inputText" />
+        app:layout_constraintBottom_toBottomOf="@+id/tbutton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/playButton"
+        app:layout_constraintTop_toTopOf="@+id/tbutton"
+        app:layout_constraintVertical_bias="0.531" />
 
     <Button
         android:id="@+id/tbutton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="91dp"
+        android:layout_marginEnd="100dp"
+        android:layout_marginTop="4dp"
         android:text="translate"
         app:layout_constraintEnd_toEndOf="@+id/ShowCodes"
+        app:layout_constraintTop_toBottomOf="@+id/inputText" />
+
+    <Button
+        android:id="@+id/playButton"
+        android:layout_width="73dp"
+        android:layout_height="50dp"
+        android:layout_marginBottom="408dp"
+        android:layout_marginEnd="109dp"
+        android:layout_marginStart="104dp"
+        android:text="Play"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/ShowCodes"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/inputText" />
 
 </android.support.constraint.ConstraintLayout>
